@@ -732,7 +732,7 @@ a:focus {
 
 .sidebar .nav-item .collapse,
 .sidebar .nav-item .collapsing {
-  margin: 0 1rem;
+  margin: 0 0.4rem;
 }
 
 .sidebar .nav-item .collapse .collapse-inner,
@@ -1025,7 +1025,7 @@ a:focus {
 
   .sidebar.toggled .nav-item .collapse,
   .sidebar.toggled .nav-item .collapsing {
-    margin: 0 1rem;
+    margin: 0 0.4rem;
   }
 
   .sidebar.toggled .nav-item .collapse .collapse-inner,

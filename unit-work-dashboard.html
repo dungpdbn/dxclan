@@ -1,0 +1,913 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="img/logo/logo.png" rel="icon" />
+    <title>DX workplace</title>
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/ruang-admin.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body id="page-top">
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav sidebar accordion"
+        id="accordionSidebar"
+        style="background-color: #343a40 !important"
+      >
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="personal-work-dashboard.html"
+        >
+          <div class="sidebar-brand-text mx-3 text-white fs-5">
+            DX workplace
+          </div>
+        </a>
+        <hr class="sidebar-divider my-0" />
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <div class="sidebar-brand-icon d-inline">
+              <img
+                src="./img/userAvatar.jpg"
+                style="width: 45px; height: 45px; border-radius: 40px"
+              />
+            </div>
+            <div class="sidebar-brand-icon d-inline">
+              <span class="text-white">Phạm Đăng Dũng </span>
+              <i
+                class="bi bi-dot"
+                style="font-size: 22px; color: green; display: inline-block"
+              >
+                <span class="text-white">Online</span></i
+              >
+              <i
+                class="bi bi-bell-fill"
+                style="font-size: 14px; color: #f39c12"
+              >
+                <span class="text-white">thông báo</span></i
+              >
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item text-white">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseBootstrap1"
+            aria-expanded="true"
+            aria-controls="collapseBootstrap"
+          >
+            <i class="far fa-fw fa-window-maximize" style="color: white"></i>
+            <span class="text-white">Công việc đơn vị</span>
+          </a>
+          <div
+            id="collapseBootstrap1"
+            class="collapse"
+            aria-labelledby="headingBootstrap"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-dark py-2 collapse-inner rounded">
+              <a class="collapse-item" href="unit-work-dashboard.html">
+                <i class="bi bi-circle"></i>
+                Dashboard công việc đơn vị</a
+              >
+              <a class="collapse-item" href="unit-work-datatables.html">
+                <i class="bi bi-circle"></i>
+                Danh sách công việc đơn vị</a
+              >
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item text-white">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseBootstrap"
+            aria-expanded="true"
+            aria-controls="collapseBootstrap"
+          >
+            <i class="far fa-fw fa-window-maximize" style="color: white"></i>
+            <span class="text-white">Công việc cá nhân</span>
+          </a>
+          <div
+            id="collapseBootstrap"
+            class="collapse"
+            aria-labelledby="headingBootstrap"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-dark py-2 collapse-inner rounded">
+              <a class="collapse-item" href="personal-work-dashboard.html">
+                <i class="bi bi-circle"></i>
+                Dashboard công việc cá nhân</a
+              >
+              <a class="collapse-item" href="personal-work-datatables.html">
+                <i class="bi bi-circle"></i>
+                Danh sách công việc cá nhân</a
+              >
+              <a class="collapse-item" href="#">
+                <i class="bi bi-lightning"></i>
+                Mẫu Công Việc</a
+              >
+              <a class="collapse-item" href="#">
+                <i class="bi bi-circle"></i>
+                Mẫu quy trình</a
+              >
+              <a class="collapse-item" href="unit-work-datatables.html">
+                <i class="bi bi-circle"></i>
+                Danh sách quy trình</a
+              >
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- Sidebar -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+          <!-- TopBar -->
+          <nav
+            class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top fixed-top"
+            style="width: 90%; left: 228px"
+          >
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link rounded-circle mr-3"
+            >
+              <i class="fa fa-bars text-black"></i>
+            </button>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown no-arrow">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  id="searchDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-question-circle text-black"></i>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                  aria-labelledby="searchDropdown"
+                >
+                  <form class="navbar-search">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control bg-light border-1 small"
+                        placeholder="What do you want to look for?"
+                        aria-label="Search"
+                        aria-describedby="basic-addon2"
+                        style="border-color: #3f51b5"
+                      />
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                          <i class="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </li>
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="alertsDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-globe2 text-black"></i>
+                </a>
+                <div
+                  class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="alertsDropdown"
+                >
+                  <h6 class="dropdown-header">Alerts Center</h6>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-primary">
+                        <i class="fas fa-file-alt text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">December 12, 2019</div>
+                      <span class="font-weight-bold"
+                        >A new monthly report is ready to download!</span
+                      >
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-success">
+                        <i class="fas fa-donate text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">December 7, 2019</div>
+                      $290.29 has been deposited into your account!
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-warning">
+                        <i class="fas fa-exclamation-triangle text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">December 2, 2019</div>
+                      Spending Alert: We've noticed unusually high spending for
+                      your account.
+                    </div>
+                  </a>
+                  <a
+                    class="dropdown-item text-center small text-gray-500"
+                    href="#"
+                    >Show All Alerts</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="messagesDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-bell fa-fw text-black pt-2"></i>
+                  <span class="badge badge-warning badge-counter">185</span>
+                </a>
+                <div
+                  class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="messagesDropdown"
+                >
+                  <h6 class="dropdown-header">Message Center</h6>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image mr-3">
+                      <img
+                        class="rounded-circle"
+                        src="img/man.png"
+                        style="max-width: 60px"
+                        alt=""
+                      />
+                      <div class="status-indicator bg-success"></div>
+                    </div>
+                    <div class="font-weight-bold">
+                      <div class="text-truncate">
+                        Hi there! I am wondering if you can help me with a
+                        problem I've been having.
+                      </div>
+                      <div class="small text-gray-500">Udin Cilok · 58m</div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image mr-3">
+                      <img
+                        class="rounded-circle"
+                        src="img/girl.png"
+                        style="max-width: 60px"
+                        alt=""
+                      />
+                      <div class="status-indicator bg-default"></div>
+                    </div>
+                    <div>
+                      <div class="text-truncate">
+                        Am I a good boy? The reason I ask is because someone
+                        told me that people say this to all dogs, even if they
+                        aren't good...
+                      </div>
+                      <div class="small text-gray-500">Jaenab · 2w</div>
+                    </div>
+                  </a>
+                  <a
+                    class="dropdown-item text-center small text-gray-500"
+                    href="#"
+                    >Read More Messages</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item dropdown no-arrow mx-1">
+                <button
+                  class="btn bg-transparent dropdown-toggle border border-secondary text-black mt-3 pl-4 pr-4"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Trưởng nhóm UIUX_11
+                  <i class="bi bi-caret-down-fill"></i>
+                </button>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton1"
+                  style="left: -1; top: 53px"
+                >
+                  <li>
+                    <a class="dropdown-item" href="#">Trưởng nhóm UIUX_11</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Trưởng phòng nghiên cứu CTY1</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">CTV kỹ thuật</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown no-arrow">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="userDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img
+                    class="img-profile rounded-circle"
+                    src="./img/userAvatar.jpg"
+                    style="max-width: 60px"
+                  />
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="userDropdown"
+                >
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Settings
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Activity Log
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a
+                    class="dropdown-item"
+                    href="javascript:void(0);"
+                    data-toggle="modal"
+                    data-target="#logoutModal"
+                  >
+                    <i
+                      class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
+                    ></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- Topbar -->
+
+          <!-- Container Fluid-->
+          <div
+            class="container-fluid"
+            id="container-wrapper"
+            style="margin-top: 5%"
+          >
+            <div
+              class="d-sm-flex align-items-center justify-content-between mb-4"
+            >
+              <h1 class="h3 mb-0 text-gray-800">Dashboard công việc đơn vị</h1>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Dashboard công việc đơn vị
+                </li>
+              </ol>
+            </div>
+
+            <div class="row mb-3">
+              <!-- Tổng số cv Card Example -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col mr-2 pl-3">
+                        <div
+                          class="text-xs font-weight-bold text-uppercase mb-1"
+                        >
+                          <i
+                            class="bi bi-card-list fa-3x"
+                            style="color: rgb(0, 192, 239)"
+                          ></i>
+                          Tổng số cv
+                        </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                          15
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Bạn đã tạo Card Example -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center pl-3 pr-3">
+                      <div class="col mr-2">
+                        <div
+                          class="text-xs font-weight-bold text-uppercase mb-1"
+                        >
+                          <i
+                            class="bi bi-person-plus-fill fa-3x"
+                            style="color: rgb(0, 192, 239)"
+                          ></i>
+                          Bạn đã tạo
+                        </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                          5
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Bạn thực hiện Card Example -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center pl-3 pr-3">
+                      <div class="col mr-2">
+                        <div
+                          class="text-xs font-weight-bold text-uppercase mb-1"
+                        >
+                          <i
+                            class="bi bi-person-fill fa-3x"
+                            style="color: rgb(40, 148, 40)"
+                          ></i>
+                          Bạn thực hiện
+                        </div>
+                        <div
+                          class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
+                        >
+                          12
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Bạn phê duyệt Card Example -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center pl-3 pr-3">
+                      <div class="col mr-2">
+                        <div
+                          class="text-xs font-weight-bold text-uppercase mb-1"
+                        >
+                          <i class="bi bi-person-fill fa-3x text-danger"></i>
+                          Bạn phê duyệt
+                        </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                          5
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Bạn tư vấn Card Example -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center pl-3 pr-3">
+                      <div class="col mr-2">
+                        <div
+                          class="text-xs font-weight-bold text-uppercase mb-1"
+                        >
+                          <i class="bi bi-people-fill fa-3x text-warning"></i>
+                          Bạn tư vấn
+                        </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                          0
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Bạn quan sát Card Example -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center pl-3 pr-3">
+                      <div class="col mr-2">
+                        <div
+                          class="text-xs font-weight-bold text-uppercase mb-1"
+                        >
+                          <i
+                            class="bi bi-person-check fa-3x"
+                            style="color: rgb(220, 182, 122)"
+                          ></i>
+                          Bạn quan sát
+                        </div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                          0
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button m-0 font-weight-bold"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Tổng quan công việc 10-2021
+                      <i class="bi bi-caret-right-fill"></i>
+                      <span>01-2022 (15 công việc)</span>
+                      <i class="bi bi-question-circle"></i>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <div
+                        class="col-lg-6 float-left p-2 text-center"
+                        style="
+                          display: inline-block;
+                          border: 1px solid rgb(238, 234, 234);
+                          border-top: 1px solid red;
+                        "
+                      >
+                        <img
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOrSURBVFiFxZbNa5xVFMZ/575fk85MJl9tiSFUxGKpIGJBGpHixoVaJQu7EAR3hbaMdpWFLt1UBFeu/AsEN9oqLguCK40UIYlYamxMiW06k0xmMt/vPS4a53sy79CUPKv73nvueZ577j3nPUJE6MWLHp53DpG3gZeA48DMxuI6CPdQ7gO/WbgxUz32kyx+VYviVyIQp/C8BUSuAKnO9Y3F9V7bcoh+Gav4n08sfpPbz7/pSwyi6fSH+P4dRD7uRb4PUqh8UvZrd+6dnU/rPgftuaALC0mKxa+BNwcx9YlAp8cfPKPvHf35er5zpSsCevXqGMXizSjk0SFv1dTcXH1tfmxfAZpOB4ThDeBMFLfVfIWdWjWaBuVMUJHvlp6/4PcVgOpnqL4azSNsr2a5nd+Oag7oufHR+rWeAvTSpReA9BDeUKtYdJgtgH60/sr8i10CcJxrdETE1i3Z25uUtkpDkkChXuPPnS3KYb1zyYjyaZsATafPAm90abVKtVBlezVDKVPsIhEjmB6JVKjVWMllyVYrlMOwex+c35ibf7khALjQ6xSO7zD2zCQiwvbdLOWOSKSenuBkcrxtbrdeY2UnS6jKbDzBmB/0co1F320KUD3f0wqIpWINEaVsexSC0YBRz2uby1TKDfKZkUQ/twjyDoDo5cuzGLPW13IPYTVEHME4pm1u7dY/BMZF9m7CqlIOQ4647iCX4IQnXFx3FmsH2/pOY1z4N8/u/Ty2brm19RDPGKZjcaZH4hiRaOQA1jnlYu1057yGzeQSEcQ0H9rWX5mut1CzlrVint2wzslk85dhVdGGI3Ck68EecxGZalpBcbNAbq1ZXMQIE89O4ScDStliF3krMpUS437AVBCjUKuxlMuiLXXiRHyU6ZEjLRGQhIu1hhZl7oiHnwjQPVHGMTjBo5AWH3anYicelItMBTE8Y0h6LuEevwjE3fYHK6h0XZafCJh87mhP52F5cI/xf94HjsPp1ORA+779QC+IM7B/6XXPBycgGI0NtEn1KTwHIiB+PNlWBzrhGOGp1kd20AIc38FP9j/hqOvjG6fv+mMLeBKIWLKa2P3gfaqnTzW+E38/APso18KVZbj+/ZMVYBIxiLfcc2ykMfRbxpEFFOri6hCZUw4tu4Vy47tUaFZGtxJS6Oo/9oHFdb+4y9yPm0O0Vb982/aZ/32jwyD6s3p9SufMUkGXo7MfLP7Iy7JZK5E5LAHrFckcehoevgARswgM33c/PnKK/vofq0xTJX/gPJkAAAAASUVORK5CYII="
+                          alt="urgent"
+                          style="width: 18px; height: 18px; margin-right: 5px"
+                        />
+                        Khẩn cấp
+                        <span class="text-danger">(2)</span>
+                      </div>
+                      <div
+                        class="col-lg-6 p-2 text-center"
+                        style="
+                          display: inline-block;
+                          border: 1px solid rgb(238, 234, 234);
+                          border-top: 1px solid #3c8dbc;
+                        "
+                      >
+                        <img
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOoSURBVFiFzZXtT1tVHMc/5/a2pS3QFkrLwzLZEzAG3QYUApEZY3RhmrnEjGhijDHxjXvl32FifGFigtE3xpgsPiw+EPfUhS0SxzYzdZuQkemLBWzYgElb6GjP8UW52S3a20uHm99X5/6+v9zvJ+fe8zsCC7V+phqVUj8ACacuDlwfFvcNb/tx5dezahxQUoqB6VfFX4a3c1S5lxPy17tpta0KR2zumLhaLEOzAlDQBzQDfdkM28yenqUTaAf2aBpRs+e4S7PbKXblJLp0y5etMqwB1ANfOgt7zZ55bfQKw5M4rDL09YXJeRXVJGGAd34hOvZnvv5WG/3P31FNRt/HN+n88vf8+qXtdL9xR7kM77vbbH3/Wn7dEhBPfDCrjkmJT2rcijWIz4sCTM6pp5EqLtee+yNgAHQE1UfS1NsTAgOgJ6TeNXsdwQfrWFgd1TWO3lsVkINLM+rtWKN4718BBOxUpuctPtA18Dkg5C7cqUYvVKxtbpO30Au5wSEUQkB3ncBh+kAadBXdgfXaWgkfDoJbA8+6zho3jAzm1wFXoefRYeRJwb2soNUPUlFUlgAAte7i3vpgs+p9UF/q5ZQ4BY9CtgGSySUmLo4/HoBsdpVz8VMEgsHSzRuU5T/w89UrdET3cX4sTkNDEy0tu1FKMfXbddLLaVsBdeEwTVuaywNYXFxg9NsT+Lw+unr68rWFeSYm7H8Kl8vF8CuvlwcQ6+3n8qUf6R8YRBP54RoI1tDbO7ChHbCSJYDX6+PAU88U1IQQtLV32Ao3ZDUHbJ8CqRSJxOyGgu2o5CAy9NPli6TTKSKRhkcHkFxaorKqiumbU8zM3Gbo0IsA3M9kyKxmbAV4K7wIR/EYS4Azp0fZ1drG5I1rHBw6jNPpJJVc4sRXx8nlcrYAqv0BDh8ZLg8g1jvAufhJnn3uEJWVVQA4nS6qqv2k0ylbAMFgjaUvzA9Tc+pNJdSIuZZZWcFdUWErrJikgvnlfJRH55PuRvGa4ZU8BQ8bXkq2j2EiMcvpU6OPByCZXOLCWJzo3v2bDmD5E8bPnqSvb4CzZ75nf3eMSKSBXDbL+Ph5VlaWbQWEw/V07u0uDyDgD/LN11/Q0trOjh0tAKRSSf64NY3FdC3Q4sJC+QDRfV14PJ6C2V/tDzD0whFSyaQtgNraOkvfEkDXdXbv6fxHPRQKEwpZ33Jmbcpl9F/p/wWgNGSxxoeRedzmKMwoBJBcADb10ldAZu3e0oSSUvGp2f8bE0wguL8U0xcAAAAASUVORK5CYII="
+                          alt="todo"
+                          style="width: 20px; margin-right: 5px"
+                        />
+                        Cần làm
+                        <span style="color: 3c8dbc">(12)</span>
+                      </div>
+                      <div class="card-body">
+                        <div
+                          class="row p-2"
+                          style="
+                            border-top: 1px solid rgb(238, 234, 234);
+                            border-bottom: 1px solid rgb(238, 234, 234);
+                          "
+                        >
+                          <div class="col-lg-3 text-center">
+                            Quá hạn
+                            <span class="text-primary">(1)</span>
+                          </div>
+                          <div class="col-lg-3 text-center">
+                            Trễ tiến độ
+                            <span class="text-danger">(2)</span>
+                          </div>
+                          <div class="col-lg-3 text-center">
+                            Hạn hôm nay
+                            <span class="text-warning">(3)</span>
+                          </div>
+                          <div class="col-lg-3 text-center">
+                            Sắp hết hạn
+                            <span class="text-success">(4)</span>
+                          </div>
+                        </div>
+                        <p>
+                          <a
+                            class="btn btn col-12 text-left"
+                            data-toggle="collapse"
+                            href="#multiCollapseExample1"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="multiCollapseExample1"
+                          >
+                            <span
+                              class="rounded-circle pl-2 pr-2 pt-1 pb-1"
+                              style="background-color: #ececec"
+                              >1</span
+                            >
+                            <span style="font-weight: bold">UIUX-11</span>
+                            <span
+                              style="
+                                font-size: 12px;
+                                background-color: red;
+                                color: white;
+                                padding: 2px;
+                                border-radius: 4px;
+                              "
+                              >74 ngày trước</span
+                            >
+                          </a>
+                        </p>
+                        <div class="row">
+                          <div class="col">
+                            <div
+                              class="collapse multi-collapse"
+                              id="multiCollapseExample1"
+                            >
+                              <div class="container-fluit ml-3">
+                                <div class="col-10 p-2">
+                                  <span>
+                                    Thời gian thực hiện công việc:
+                                    <i
+                                      class="bi bi-clock"
+                                      style="color: rgb(191, 71, 71)"
+                                    ></i>
+                                    <i
+                                      class="fa fa-clock-o"
+                                      style="
+                                        margin-right: 1px;
+                                        color: rgb(191, 71, 71);
+                                      "
+                                    >
+                                    </i>
+                                    <span> 21-10-2021 11:23 AM </span>
+                                    <i
+                                      class="bi bi-clock"
+                                      style="color: rgb(191, 71, 71)"
+                                    ></i>
+                                    <span> - 20-01-2022 05:30 PM </span>
+                                  </span>
+                                </div>
+                                <div class="col-10 p-2">
+                                  <span
+                                    >Độ ưu tiên công việc:
+                                    <span>Tiêu chuẩn</span>
+                                  </span>
+                                </div>
+                                <div class="col-7 p-2">
+                                  <span> Tiến độ hiện tại: </span>
+                                  <div class="progress col-10 float-right">
+                                    <div
+                                      class="progress-bar progress-bar-striped progress-bar-animated"
+                                      role="progressbar"
+                                      aria-valuenow="75"
+                                      aria-valuemin="0"
+                                      aria-valuemax="100"
+                                      style="width: 75%"
+                                    >
+                                      <span>75%</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-10 p-2">
+                                  Người thực hiện: Phạm Anh Tuấn
+                                </div>
+                                <div class="col-10 p-2">
+                                  Vai trò trong công việc: Người phê duyệt
+                                </div>
+                                <div class="col-10 p-2">
+                                  <a href="#">Xem chi tiết -></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tổng quan công việc  -->
+            <div class="card mb-3">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button m-0 font-weight-bold"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="true"
+                      aria-controls="collapseTwo"
+                    >
+                      Lịch công việc 10-2021
+                      <i class="bi bi-caret-right-fill"></i>
+                      <span>01-2022</span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <div class="card-body">
+                        <div class="chart-area">
+                          <canvas id="myAreaChart"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gantt chart -->
+            <div class="card mb-3">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button m-0 font-weight-bold"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="true"
+                      aria-controls="collapseThree"
+                    >
+                      Miền kết quả công việc 10-2021
+                      <i class="bi bi-caret-right-fill"></i>
+                      <span>01-2022</span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <img class="w-100" src="./img/chart1.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button m-0 font-weight-bold"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="true"
+                      aria-controls="collapseFour"
+                    >
+                      Kết quả trung bình công việc 10-2021
+                      <i class="bi bi-caret-right-fill"></i>
+                      <span>01-2022</span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <img class="w-100" src="./img/chart2.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Average chart -->
+            <div class="card mb-3">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button m-0 font-weight-bold"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive"
+                      aria-expanded="true"
+                      aria-controls="collapseFive"
+                    >
+                      Kết quả trung bình công việc 10-2021
+                      <i class="bi bi-caret-right-fill"></i>
+                      <span>01-2022</span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFive"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <img class="w-100" src="./img/chart3.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pie chart -->
+            <div class="card mb-3 col-xl-5 d-inline float-left">
+              <h5 class="accordion-header text-primary" id="headingOne">
+                Trạng thái công việc 10-2021
+                <i class="bi bi-caret-right-fill"></i>
+                <span>01-2022</span>
+              </h5>
+              <img class="w-100" src="./img/chart4.png" />
+            </div>
+            <div class="card mb-3 col-xl-5 d-inline float-right mr-auto">
+              <h5 class="accordion-header text-primary" id="headingOne">
+                Tiến độ công việc 10-2021
+                <i class="bi bi-caret-right-fill"></i>
+                <span>01-2022</span>
+                <i class="bi bi-question-circle"></i>
+              </h5>
+              <img class="w-100" src="./img/chart5.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/ruang-admin.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="js/demo/chart-area-demo.js"></script>
+  </body>
+</html>

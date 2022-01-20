@@ -549,7 +549,7 @@ a:focus {
 }
 .sidebar {
   min-height: 100vh;
-  width: 15rem !important;
+  width: 14rem !important;
   background-color: #343a40 !important;
   -webkit-box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
   box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
@@ -617,7 +617,7 @@ a:focus {
 }
 .sidebar .nav-item .collapse,
 .sidebar .nav-item .collapsing {
-  margin: 0 1rem;
+  margin: 0 0.4rem;
 }
 .sidebar .nav-item .collapse .collapse-inner,
 .sidebar .nav-item .collapsing .collapse-inner {
@@ -864,7 +864,7 @@ a:focus {
   }
   .sidebar.toggled .nav-item .collapse,
   .sidebar.toggled .nav-item .collapsing {
-    margin: 0 1rem;
+    margin: 0 0.4rem;
   }
   .sidebar.toggled .nav-item .collapse .collapse-inner,
   .sidebar.toggled .nav-item .collapsing .collapse-inner {
